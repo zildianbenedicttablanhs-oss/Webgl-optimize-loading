@@ -1,0 +1,146 @@
+      
+    @font-face {
+      font-family: 'Pixeloid-Sans Bold';
+      src: url(Font/PixeloidSans-Bold.ttf) format('truetype');
+    }
+
+
+    body {
+      overflow: hidden;
+    }
+
+    #start-screen {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100vw;
+      height: 100vh;
+      max-width: 540px;
+      max-height: 1080px;
+      background-color: #F7E7CE;
+      color: white;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+     #start-screen::-webkit-scrollbar{
+      display: none;
+    }
+
+    #background-icons {
+      width: 100%;
+      height: 100%;
+      background-image: url(petOverview.png);
+      background-repeat: repeat ;
+      background-position: 0 0;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* animation: diagonal-scroll 5s linear infinite; */
+    }
+
+     /* .dim-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(0, 0, 0, 0.5);
+      z-index: 1;
+    } */
+
+
+    /* @keyframes diagonal-scroll {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: -200px 200px;
+      }
+    } */
+
+    #dog-icon {
+      width: 75px;
+      height: 60px;
+      margin-bottom: -20px;
+    }
+
+    p {
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+      font-family: 'Pixeloid-Sans Bold';
+      font-weight: bold;
+      color: black;
+    }
+
+    #loading-text {
+      margin: 15px 0px 10px 0px;
+      font-size: 17px;
+    }
+
+    #version-text {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    #start-button {
+      position: relative;
+      cursor: pointer;
+      color: white;
+      border: none;
+      background: transparent;
+      padding: 0;
+      margin: 0;
+      /* hide after loading */
+      display: none; 
+    }
+
+    #button-img {
+      display: block;
+      width: 110px;
+      height: 65px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #button-text {
+      position: absolute;
+      top: 42%;
+      left: 52%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      margin: 0;
+
+      letter-spacing: 1px;
+      font-family: 'Pixeloid-Sans Bold';
+      font-size: 20.5px;
+      color: white;
+      text-shadow: -1.5px 1.5px 2px rgba(0, 0, 0, 0.521);
+    }
+
+    /* loading bar */
+    #loading-bar-container {
+      width: 60%;
+      height: 18px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 2px solid rgba(129, 129, 129, 0.4);
+      overflow: hidden;
+    }
+
+    #loading-bar-fill {
+      height: 100%;
+      width: 0%;
+      background-color: #E4CBA5;
+      animation: loading-fill 1s linear forwards;
+    }
+
+    @keyframes loading-fill {
+      from { width: 0%; }
+      to   { width: 100%; }
+    }
